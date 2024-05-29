@@ -238,7 +238,7 @@ def details(request, slug):
 @require_POST
 def login(request):
     redirect_to = request.GET.get(REDIRECT_FIELD_NAME)
-
+    print("test")
     if not url_has_allowed_host_and_scheme(url=redirect_to, allowed_hosts=request.get_host()):
         redirect_to = reverse("pages-root")
     else:
