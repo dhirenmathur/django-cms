@@ -68,6 +68,7 @@ def details(request, slug):
     The main view of the Django-CMS! Takes a request and a slug, renders the
     page.
     """
+    print("details")
     is_authenticated = request.user.is_authenticated
     response_timestamp = now()
     if get_cms_setting("PAGE_CACHE") and (
